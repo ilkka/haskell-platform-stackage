@@ -11,6 +11,7 @@ RUN apt-get update && \
   cd / && \
   curl -O http://www.haskell.org/platform/download/2014.2.0.0/haskell-platform-${HASKELL_PLATFORM_VERSION}-unknown-linux-x86_64.tar.gz && \
   tar xzf haskell-platform-${HASKELL_PLATFORM_VERSION}-unknown-linux-x86_64.tar.gz && \
+  rm -f haskell-platform-${HASKELL_PLATFORM_VERSION}-unknown-linux-x86_64.tar.gz && \
   /usr/local/haskell/ghc-7.8.3-x86_64/bin/activate-hs && \
   cabal update && \
   sed -i "s%^remote-repo: .*%remote-repo: stackage:http://www.stackage.org/stackage/46bb2d7487546939e22612e7d757f1df5a5163e9%" /root/.cabal/config && \
