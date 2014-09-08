@@ -16,3 +16,7 @@ RUN apt-get update && \
   cabal update && \
   sed -i "s%^remote-repo: .*%remote-repo: stackage:http://www.stackage.org/stackage/46bb2d7487546939e22612e7d757f1df5a5163e9%" /root/.cabal/config && \
   cabal update
+
+WORKDIR /root
+CMD ["bash"]
+
